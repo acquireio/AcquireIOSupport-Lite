@@ -17,7 +17,7 @@ To connect AcquireIOSupport Lite SDK to your iOS app just add it into your Podfi
    ```
 
    target :YourTargetName do
-      pod 'AcquireIOSupport-Lite’
+      pod 'AcquireIOSupport-Lite'
    end
 
    ```
