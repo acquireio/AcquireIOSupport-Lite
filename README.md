@@ -61,6 +61,9 @@ Make sure to always open the Xcode workspace instead of the project file when bu
 open YourTargetName.xcworkspace
 ```
 
+6) Make sure to disable bitcode for your project: Go to your project's settings and find the **Build settings** tab, check **All** and search for **bitcode**, then set it to **No**.
+
+
 ### Setup Info.plist
 
 >  *Since iOS 10, it's mandatory to add before you access privacy-sensitive data like Camera, Photo Library, and so on, you must ask for the authorization, or your app will crash when you access them.*
