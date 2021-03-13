@@ -81,3 +81,10 @@ Remember to write your description why you ask for this authorization, between `
 <string>$(PRODUCT_NAME) send photo/video to agent</string>
 
 ```
+
+## Setup and installation guide
+
+* Our [installation guide](https://developer.acquire.io/v/2.0.0/sdk/ios/sdk-setup-guide/integration-guide-lite) contains full setup and initialization instructions.
+
+
+* Please contact us on [AcquireIO Support](https://acquire.io) with any questions you may have, we're only a message away!
