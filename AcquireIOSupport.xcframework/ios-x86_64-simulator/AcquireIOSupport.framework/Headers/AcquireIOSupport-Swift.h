@@ -188,6 +188,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreData;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -327,7 +329,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AcquireIOCon
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @property (nonatomic, readonly, copy) NSString * _Nonnull buttonImageName;
-/// Default theme option like color before session start, after session start theme color will be change according to your acquire setting. See more to know about theme customization https://goo.gl/FvrtXf
+/// Default theme according to your acquire setting. See more to know about theme customization https://developer.acquire.io/v/2.0.0/sdk/ios/theme-setting
 /// Initialize dictionary key: ThemeOptions
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull themeOptions;
 /// show list of threads.
@@ -348,7 +350,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AcquireIOCon
 /// if yes then user want be able to upload any attachment in chat.
 /// This is optional, if not set default is @NO
 @property (nonatomic, readonly) BOOL disableAttachment;
-/// Session will be auto connect to server and start and no need to invoke any additional method for start session. If you set @“SessionConnectAndStartAuto”: @NO then you must call [[AcquireIO support] startSession] method to start connection with server.
+/// To start connection with server you must call <code>AcquireIO.support.startSession()</code> method. Session will be auto connect to server and start and no need to invoke any additional method for start session. If you set “SessionConnectAndStartAuto”: true
 /// Initialize dictionary key: SessionConnectAndStartAuto
 @property (nonatomic, readonly) BOOL sessionConnectAndStartAuto;
 /// <ul>
@@ -405,6 +407,66 @@ typedef SWIFT_ENUM(NSInteger, AcquireIOInteractionEventType, open) {
   AcquireIOInteractionEventTypeConversationEnd = 18,
   AcquireIOInteractionEventTypeConversationFeedbackSubmit = 19,
 };
+
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+SWIFT_CLASS_NAMED("CDMessage")
+@interface CDMessage : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CDThread;
+
+@interface CDMessage (SWIFT_EXTENSION(AcquireIOSupport))
+@property (nonatomic) int64_t caseId;
+@property (nonatomic, copy) NSDate * _Nullable dateCreated;
+@property (nonatomic) int64_t id;
+@property (nonatomic, strong) NSObject * _Nullable rawData;
+@property (nonatomic) BOOL seen;
+@property (nonatomic) int64_t threadId;
+@property (nonatomic, strong) CDThread * _Nullable thread;
+@end
+
+
+SWIFT_CLASS_NAMED("CDThread")
+@interface CDThread : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSSet;
+
+@interface CDThread (SWIFT_EXTENSION(AcquireIOSupport))
+- (void)addMessagesObject:(CDMessage * _Nonnull)value;
+- (void)removeMessagesObject:(CDMessage * _Nonnull)value;
+- (void)addMessages:(NSSet * _Nonnull)values;
+- (void)removeMessages:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CDThread (SWIFT_EXTENSION(AcquireIOSupport))
+@property (nonatomic) int64_t id;
+@property (nonatomic, strong) NSObject * _Nullable lastMessage;
+@property (nonatomic, strong) NSObject * _Nullable rawdata;
+@property (nonatomic) int64_t threadId;
+@property (nonatomic, strong) NSObject * _Nullable userDict;
+@property (nonatomic, strong) NSSet * _Nullable messages;
+@end
+
+
+SWIFT_CLASS_NAMED("CDVisitorData")
+@interface CDVisitorData : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface CDVisitorData (SWIFT_EXTENSION(AcquireIOSupport))
+@property (nonatomic) int64_t id;
+@property (nonatomic, strong) NSObject * _Nullable myselfData;
+@property (nonatomic, strong) NSObject * _Nullable rawData;
+@property (nonatomic, copy) NSString * _Nullable token;
+@property (nonatomic) int64_t updatedOn;
+@end
 
 typedef SWIFT_ENUM(NSInteger, ChannelType, open) {
   ChannelTypeChat = 1,
