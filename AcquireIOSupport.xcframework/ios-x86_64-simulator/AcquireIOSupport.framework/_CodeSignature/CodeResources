@@ -6,39 +6,39 @@
 	<dict>
 		<key>Headers/AcquireIOSupport-Swift.h</key>
 		<data>
-		rCkTh7FLgloxC1w9Cekxrh9xoCM=
+		3pJ0Aq2QVF70ZcJuyjokIugz44k=
 		</data>
 		<key>Headers/AcquireIOSupport.h</key>
 		<data>
-		6KqcRN3mFhK5lNblRnrlTo4KKJk=
+		XvMzAoQR2YBEm47Cc52/jfLftWE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+qE2uPkIQY/qTOQsaf8yGlqXpiE=
+		ogeWHmVeIU1nGa4JSrh7vwhOcqM=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8b5MjP3MWVZm1P6vrqtwIEQOPrg=
+		XMQmFGNPzpT65qKLP7qfFjhdzQs=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		VeJgNJ+CQTWWlCtAq1BqwXMHJwk=
+		Ne4460lsDyuxHnnjENPCyCi6UYI=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bi6f1zMRw7+85qiotHbNtQSFtEQ=
+		tkyH/jsKz8nv6KChlkA2fUCBaR4=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		8b5MjP3MWVZm1P6vrqtwIEQOPrg=
+		XMQmFGNPzpT65qKLP7qfFjhdzQs=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		VeJgNJ+CQTWWlCtAq1BqwXMHJwk=
+		Ne4460lsDyuxHnnjENPCyCi6UYI=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		bi6f1zMRw7+85qiotHbNtQSFtEQ=
+		tkyH/jsKz8nv6KChlkA2fUCBaR4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,56 +67,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pzNUBAw3qsK/LoQ8UfnQWopwh9Y/RpcN+IBdGnF3/FE=
+			cUsnEdWVivM2Dow30YQ/xmbCeDIAgx79+5LYIdXXmc0=
 			</data>
 		</dict>
 		<key>Headers/AcquireIOSupport.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TUypo+aZoPZ4o8E2ZYxJrJgL6zvbHudxG+OTbp4zC64=
+			jOX2XAmVolOmcl3TtYB95aLUm783oELyC+QNtjIBlNg=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HUU+Z8bScHgwd8DYkcYfB3UytCKPKGq+7CW4Hgqxu00=
+			4Zng817yO44zV5ddtvV/rsHa5RAR46MFEtdPH0vQNrM=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5eSYZMAGYGhudit7YswHG3TzVKgC+dgB6J2DSuPktnc=
+			PHvYrlJJOxQluoWxeD7zrQNotIJ73NOs9ul6LRL2Vfw=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MMHQUcOknZ0tA0LQM6HEKInuRFtGco16IRw/TNWjgHA=
+			Yb5X+MnCmSIZgFbnWpUcY1VtQ6zv0OyICnqw7sgYsjw=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HUU+Z8bScHgwd8DYkcYfB3UytCKPKGq+7CW4Hgqxu00=
+			4Zng817yO44zV5ddtvV/rsHa5RAR46MFEtdPH0vQNrM=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5eSYZMAGYGhudit7YswHG3TzVKgC+dgB6J2DSuPktnc=
+			PHvYrlJJOxQluoWxeD7zrQNotIJ73NOs9ul6LRL2Vfw=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MMHQUcOknZ0tA0LQM6HEKInuRFtGco16IRw/TNWjgHA=
+			Yb5X+MnCmSIZgFbnWpUcY1VtQ6zv0OyICnqw7sgYsjw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

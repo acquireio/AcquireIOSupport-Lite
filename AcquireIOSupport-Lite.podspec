@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AcquireIOSupport-Lite'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'Your complete customer communication platform - and not just live chat'
   s.homepage         = 'https://acquire.io/'
   s.license          = { :type => 'Commercial', :text => 'Copyright (C) 2021 by Acquire' }
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   
-  s.dependency 'Socket.IO-Client-Swift', '~> 15.2'
+  s.dependency 'Socket.IO-Client-Swift', '~> 16.0.0'
   
 end
