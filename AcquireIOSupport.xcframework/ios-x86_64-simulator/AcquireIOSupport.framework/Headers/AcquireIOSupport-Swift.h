@@ -218,8 +218,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AcquireIO * 
 + (AcquireIO * _Nonnull)support SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@property (nonatomic, strong) id <AcquireIODelegate> _Nullable delegate;
-- (void)setAccount:(NSString * _Nonnull)accountUID domain:(NSString * _Nonnull)domain withOptions:(AcquireIOConfig * _Nullable)optionDictionary;
+/// Prevents using the default ‘()’ initializer
+@property (nonatomic, weak) id <AcquireIODelegate> _Nullable delegate;
+- (void)setAccount:(NSString * _Nonnull)accountUID domain:(NSString * _Nullable)domain withOptions:(AcquireIOConfig * _Nullable)optionDictionary;
 @end
 
 
@@ -307,6 +308,28 @@ enum ChannelType : NSInteger;
 ///   </li>
 /// </ul>
 - (void)setVisitorDetails:(NSDictionary<NSString *, id> * _Nonnull)data;
+/// Example: Set Fields [“id”:“xxxxxxx”,“email”:“abc@gmail.com”] of the app visitor.
+/// \code
+/// @note This must be called before setAccount.
+///
+/// \endcode<ul>
+///   <li>
+///     This is part of additional visitor configuration.
+///   </li>
+///   <li>
+///     Pass nil values for both name and email to clear out old existing values.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @param data  <code>id</code> or <code>email</code> of the contact/visitor.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @available Available in SDK version 1.1.1 or later
+///   </li>
+/// </ul>
 - (void)setVisitorIdentityFields:(NSDictionary<NSString *, id> * _Nonnull)data;
 /// call method logoutVisitor to remove all acquire data from app related to visitor.
 /// @note This should be called when visit logged out.
@@ -428,7 +451,8 @@ typedef SWIFT_ENUM(NSInteger, AcquireIOConnectionStatus, open) {
 enum AcquireIOInteractionEventType : NSInteger;
 
 SWIFT_PROTOCOL("_TtP16AcquireIOSupport17AcquireIODelegate_")
-@protocol AcquireIODelegate
+@protocol AcquireIODelegate <NSObject>
+@optional
 /// Start a connection session with acquire server. After calling startSession, the AcquireIODelegate delegate will receive either didChangeConnectionStatus: or onError:.
 /// <em>setAccount: should be called first.</em>
 /// @Available Available in SDK version 1.0.0 or later

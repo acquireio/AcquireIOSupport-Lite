@@ -193,28 +193,19 @@ public enum ToastPosition {
     get
   }
 }
-@objc public protocol AcquireIODelegate {
-  @objc func didChangeConnectionStatus(status: AcquireIOSupport.AcquireIOConnectionStatus)
-  @objc func didChangeAgentStatus(agentID: Swift.String, andStatus status: AcquireIOSupport.AcquireIOAgentStatus)
-  @objc func onError(error: Swift.Error)
-  @objc func hideSupport()
-  @objc func didReceiveTriggerEvent(_ eventName: Swift.String)
-  @objc func didUserInteracted(withEvent type: AcquireIOSupport.AcquireIOInteractionEventType, withData data: [Swift.String : Any]?)
-  @objc func didReceiveNewMessage(_ message: Any)
-}
-extension AcquireIODelegate {
-  public func didChangeConnectionStatus(status: AcquireIOSupport.AcquireIOConnectionStatus)
-  public func didChangeAgentStatus(agentID: Swift.String, andStatus status: AcquireIOSupport.AcquireIOAgentStatus)
-  public func hideSupport()
-  public func onError(error: Swift.Error)
-  public func didReceiveTriggerEvent(_ eventName: Swift.String)
-  public func didUserInteracted(withEvent type: AcquireIOSupport.AcquireIOInteractionEventType, withData data: [Swift.String : Any]?)
-  public func didReceiveNewMessage(_ message: Any)
+@objc public protocol AcquireIODelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func didChangeConnectionStatus(status: AcquireIOSupport.AcquireIOConnectionStatus)
+  @objc optional func didChangeAgentStatus(agentID: Swift.String, andStatus status: AcquireIOSupport.AcquireIOAgentStatus)
+  @objc optional func onError(error: Swift.Error)
+  @objc optional func hideSupport()
+  @objc optional func didReceiveTriggerEvent(_ eventName: Swift.String)
+  @objc optional func didUserInteracted(withEvent type: AcquireIOSupport.AcquireIOInteractionEventType, withData data: [Swift.String : Any]?)
+  @objc optional func didReceiveNewMessage(_ message: Any)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class AcquireIO : ObjectiveC.NSObject {
   @objc public static let support: AcquireIOSupport.AcquireIO
-  @objc final public var delegate: AcquireIOSupport.AcquireIODelegate?
-  @objc final public func setAccount(_ accountUID: Swift.String, domain: Swift.String = "acquire.io", withOptions optionDictionary: AcquireIOSupport.AcquireIOConfig?)
+  @objc weak final public var delegate: AcquireIOSupport.AcquireIODelegate?
+  @objc final public func setAccount(_ accountUID: Swift.String, domain: Swift.String? = "acquire.io", withOptions optionDictionary: AcquireIOSupport.AcquireIOConfig?)
   @objc deinit
 }
 extension AcquireIO {

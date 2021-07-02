@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AcquireIOSupport-Lite'
-  s.version          = '1.1.3'
+  s.version          = '1.1.4'
   s.summary          = 'Your complete customer communication platform - and not just live chat'
   s.homepage         = 'https://acquire.io/'
   s.license          = { :type => 'Commercial', :text => 'Copyright (C) 2021 by Acquire' }
