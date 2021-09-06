@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8Wza7asCdohcNKqfag+owNrEKHE=
+		ty1PzNV/2xbxu/g+O0Vhw2XuKL8=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vtiqIZ17Vwqkd1lSOIbkrLdAQ8o=
+		TfYoyLr8BjbLUmtOGTs7WdUWNks=
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		vtiqIZ17Vwqkd1lSOIbkrLdAQ8o=
+		TfYoyLr8BjbLUmtOGTs7WdUWNks=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qq8Cw5pjHNh7sLpDLgxzr11g/t7FULyZ/ZaQHtmKTTE=
+			ldYLnaMwFLsQw5xvjYS92qxNEzNTqcNZyPvTI/Tbwfc=
 			</data>
 		</dict>
 		<key>Modules/AcquireIOSupport.swiftmodule/x86_64.swiftdoc</key>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qq8Cw5pjHNh7sLpDLgxzr11g/t7FULyZ/ZaQHtmKTTE=
+			ldYLnaMwFLsQw5xvjYS92qxNEzNTqcNZyPvTI/Tbwfc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
