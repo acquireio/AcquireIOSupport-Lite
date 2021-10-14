@@ -309,6 +309,26 @@ enum ChannelType : NSInteger;
 ///   </li>
 /// </ul>
 - (void)setVisitorDetails:(NSDictionary<NSString *, id> * _Nonnull)data;
+/// Example: update the [“name”:“abc”,“phone”:“xxxxxxxx”,“department”:“4444”] of the app visitor.
+/// <ul>
+///   <li>
+///     Pass nil values for both name and email to clear out old existing values.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @param name The name of the user.
+///   </li>
+///   <li>
+///     @param phone The phone of the user.
+///   </li>
+///   <li>
+///   </li>
+///   <li>
+///     @available Available in SDK version 1.1.7 or later
+///   </li>
+/// </ul>
+- (void)updateVisitorDetails:(NSDictionary<NSString *, id> * _Nonnull)data;
 /// Example: Set Fields [“id”:“xxxxxxx”,“email”:“abc@gmail.com”] of the app visitor.
 /// \code
 /// @note This must be called before setAccount.
